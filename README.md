@@ -65,6 +65,7 @@ Inspect resulting LevelDB database files:
     -rw-r--r-- 1 jfathman jfathman 57 May  1 10:16 LOG
     -rw-r--r-- 1 jfathman jfathman 55 May  1 10:16 000003.log
 
+
     [jfathman@cloud nats-exp-02]$ hexdump -C mydb/MANIFEST-000002 
     00000000  56 f9 b8 f8 1c 00 01 01  1a 6c 65 76 65 6c 64 62  |V........leveldb|
     00000010  2e 42 79 74 65 77 69 73  65 43 6f 6d 70 61 72 61  |.BytewiseCompara|
@@ -72,12 +73,15 @@ Inspect resulting LevelDB database files:
     00000030  04 00                                             |..|
     00000032
 
+
     [jfathman@cloud nats-exp-02]$ hexdump -C mydb/CURRENT 
     00000000  4d 41 4e 49 46 45 53 54  2d 30 30 30 30 30 32 0a  |MANIFEST-000002.|
     00000010
 
+
     [jfathman@cloud nats-exp-02]$ cat mydb/LOG 
     2016/05/01-10:16:47.039565 7fbb0b7fe700 Delete type=3 #1
+
 
     [jfathman@cloud nats-exp-02]$ hexdump -C mydb/000003.log 
     00000000  da fd 29 a4 17 00 01 01  00 00 00 00 00 00 00 01  |..).............|
